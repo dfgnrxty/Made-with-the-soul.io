@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примеры работ - Чугунов Максим</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+        
+        header {
+            background-color: #202020;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .user-info h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        
+        .user-info p {
+            color: #aaaaaa;
+            font-size: 14px;
+        }
+        
+        .title {
+            margin-left: auto;
+        }
+        
+        .title h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        section.portfolio {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .portfolio-item {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .portfolio-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .portfolio-info {
+            padding: 15px;
+            background-color: #202020;
+        }
+        
+        .portfolio-info h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .portfolio-info p {
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+        
+        .thumbnail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .thumbnail {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .thumbnail:hover {
+            transform: scale(1.03);
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .thumbnail-info {
+            padding: 15px;
+            background-color: #202020;
+        }
+        
+        .thumbnail-info h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        .thumbnail-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+        
+        footer {
+            background-color: #202020;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .vk-banner {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .vk-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .vk-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+        
+        .vk-icon {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .vk-icon img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .title {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .vk-icons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <div class="avatar">
+                <img src="лого.jpg" alt="Чугунов Максим">
+            </div>
+            <div class="user-info">
+                <h2>Чугунов Максим</h2>
+                <p>Графический дизайнер</p>
+            </div>
+        </div>
+    </header>
+    
+    <section class="portfolio">
+        <h2 class="section-title">Примеры работ (обложки Ютуб)</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="4.000.000 В 17 ЛЕТ.jpg" alt="4.000.000 В 17 ЛЕТ">
+                <div class="portfolio-info">
+                    <h3>4.000.000 В 17 ЛЕТ</h3>
+                    <p>Бизнес-история успеха</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="КАК С НУЛЯ ОТКРЫТЬ КОФЕЙНЮ.jpg" alt="КАК С НУЛЯ ОТКРЫТЬ КОФЕЙНЮ">
+                <div class="portfolio-info">
+                    <h3>КАК С НУЛЯ ОТКРЫТЬ КОФЕЙНЮ</h3>
+                    <p>Интервью с Ярославом Киселёвым</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="Avito.jpg" alt="Avito +4500₽">
+                <div class="portfolio-info">
+                    <h3>Avito +4500₽ | -75000₽</h3>
+                    <p>Финансовый обзор</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="ПОЧЕМУ ТЫ ЗАСТРЯЛ.jpg" alt="ПОЧЕМУ ТЫ ЗАСТРЯЛ?">
+                <div class="portfolio-info">
+                    <h3>ПОЧЕМУ ТЫ ЗАСТРЯЛ?</h3>
+                    <p>Мотивационное видео</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="блум.jpg" alt="BLUM РАЗДАЛ ТОКЕНЫ DOGS">
+                <div class="portfolio-info">
+                    <h3>BLUM РАЗДАЛ ТОКЕНЫ DOGS</h3>
+                    <p>Криптовалютные новости</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="portfolio">
+        <h2 class="section-title">Пример оформления группы VK</h2>
+        
+        <!-- Banner image -->
+        <div class="vk-banner">
+            <img src="лиды.jpg" alt="Мы создаем лиды, а вы только считаете прибыль">
+        </div>
+
+    <footer>
+        <p>© 2025 Чугунов Максим. Все права защищены.</p>
+    </footer>
+</body>
+</html>
